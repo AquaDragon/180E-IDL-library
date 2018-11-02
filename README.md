@@ -1,3 +1,5 @@
 # 180E-library
 
-This is a set of IDL libary files for use in the Physics 180E course, Plasma Physics Laboratory.
+These files are part of the IDL library for the course Physics 180E - Plasma Physics Laboratory.
+
+Files beginning with 'h5' are helper functions required for 'readhdf5.pro' to run.
