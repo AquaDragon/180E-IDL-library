@@ -5,7 +5,8 @@
 ;SYNTAX:      Result = C_CORRELATE_FFT(x, y, nlag)
 ;INFO:        Result = 1D array of cross-correlation
 ;             x,y    = 1D array of data
-;             nlag   = An integer specfying the maximum lag time to perform the cross-correlation.
+;             nlag   = An integer specfying the maximum lag time to perform the
+;                      cross-correlation.
 
 FUNCTION C_CORRELATE_FFT, x, y, nlag 
     on_error, 2
