@@ -3,7 +3,7 @@
 ;             this code may be re-written or updated from time to time.)
 ;
 ;AUTHOR:      swjtang / Timothy DeHaas
-;DATE:        01 Mar 2018
+;DATE:        14 Feb 2019
 ;DESCRIPTION: This is a translator used to convert hdf5 files into an IDL readable format.
 ;             It is written in the form of a tutorial and uses a number of procedures that
 ;             were written by past UCLA grad students.
@@ -64,6 +64,7 @@ FUNCTION READHDF5, FILENAME, XPOS=XPOS, YPOS=YPOS, TIME=TIME
    nshots = 1
    WHILE POS_STRCT[nshots].x EQ POS_STRCT[0].x AND POS_STRCT[nshots].y EQ POS_STRCT[0].y DO BEGIN
    	nshots++
+    IF nshots EQ n_elements(POS_STRCT) THEN BREAK ; this breaks the while loop for 1x1xnshot arrays
    ENDWHILE
 
  ;Determines how many x-positions there are for one y-coordinate. We first count the number of
